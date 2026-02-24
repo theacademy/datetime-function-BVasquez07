@@ -22,7 +22,7 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getTodaysDate() {
 		//YOUR CODE STARTS HERE
-		return null;
+		return LocalDate.now();
 		//YOUR CODE ENDS HERE
 
 	}
@@ -33,7 +33,9 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		// we want the to give back the date x days after the inputted date.
+		// i.e. date = 2/24/26, x = 3 what date will it be in 3 days?
+		return date.plusDays(x);
 		//YOUR CODE ENDS HERE
 
 	}
@@ -44,7 +46,9 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		// we want the to give back the date x weeks prior to the inputted date.
+		// i.e. date = 2/24/26, x = 3 what date was it three weeks ago?
+		return date.minusWeeks(x);
 		//YOUR CODE ENDS HERE
 
 	}
@@ -56,7 +60,12 @@ public class DateTimeFunctions {
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-		return null;
+
+		Period dateDelta =  date1.until(date2);
+		String output = "Year-" + dateDelta.getYears() + ":"
+				+ "Months-" + dateDelta.getMonths()
+				+ ":" + "Days-" + dateDelta.getDays();
+		return output;
 		//YOUR CODE ENDS HERE
 
 	}
