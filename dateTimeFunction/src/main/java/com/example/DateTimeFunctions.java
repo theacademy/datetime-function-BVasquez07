@@ -62,7 +62,7 @@ public class DateTimeFunctions {
 		//YOUR CODE STARTS HERE
 
 		Period dateDelta =  date1.until(date2);
-		String output = "Year-" + dateDelta.getYears() + ":"
+		String output = "Years-" + dateDelta.getYears() + ":"
 				+ "Months-" + dateDelta.getMonths()
 				+ ":" + "Days-" + dateDelta.getDays();
 		return output;
