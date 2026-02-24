@@ -60,7 +60,7 @@ public class DateTimeFunctions {
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-
+		//fixed bug
 		Period dateDelta =  date1.until(date2);
 		String output = "Years-" + dateDelta.getYears() + ":"
 				+ "Months-" + dateDelta.getMonths()
